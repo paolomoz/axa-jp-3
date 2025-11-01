@@ -1,0 +1,4 @@
+mountpoints:
+  /:
+    url: https://content.da.live/paolomoz/axa-jp-3/
+    type: markup
