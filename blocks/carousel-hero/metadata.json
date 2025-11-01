@@ -1,0 +1,32 @@
+{
+  "name": "carousel-hero",
+  "baseBlock": "carousel",
+  "description": "Hero carousel variant for full-width rotating banners at the top of pages",
+  "visualCharacteristics": {
+    "layout": "Full-width carousel with image backgrounds",
+    "contentPosition": "Overlay content on images",
+    "navigation": "Navigation arrows and slide indicators",
+    "purpose": "Hero/banner section with rotating promotional content"
+  },
+  "reuseGuidance": {
+    "useFor": [
+      "Homepage hero banners",
+      "Top-of-page promotional carousels",
+      "Full-width image sliders with text overlay"
+    ],
+    "doNotUseFor": [
+      "Content carousels within page sections",
+      "Small image galleries",
+      "Product listings"
+    ]
+  },
+  "usage": [
+    {
+      "page": "/content/index.md",
+      "section": "Top rotating banner",
+      "dateAdded": "2025-11-01"
+    }
+  ],
+  "created": "2025-11-01",
+  "lastModified": "2025-11-01"
+}

@@ -1,0 +1,33 @@
+{
+  "name": "cards-partners",
+  "baseBlock": "cards",
+  "description": "Custom cards variant for partner and recruitment links",
+  "visualCharacteristics": {
+    "layout": "Grid layout with card items",
+    "imageStyle": "4:3 aspect ratio with object-fit cover",
+    "spacing": "24px gap between cards",
+    "purpose": "Display partner-related cards for chamber of commerce members and recruitment"
+  },
+  "reuseGuidance": {
+    "useFor": [
+      "Partner program listings",
+      "Chamber of commerce member sections",
+      "Agency recruitment cards",
+      "B2B partnership links"
+    ],
+    "doNotUseFor": [
+      "Customer-facing quick access links",
+      "Featured editorial content",
+      "Product showcases"
+    ]
+  },
+  "usage": [
+    {
+      "page": "/content/index.md",
+      "section": "商工会議所会員の方 and 募集代理店",
+      "dateAdded": "2025-11-01"
+    }
+  ],
+  "created": "2025-11-01",
+  "lastModified": "2025-11-01"
+}

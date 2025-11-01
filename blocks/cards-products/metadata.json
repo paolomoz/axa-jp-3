@@ -1,0 +1,33 @@
+{
+  "name": "cards-products",
+  "baseBlock": "cards",
+  "description": "Cards variant optimized for displaying insurance products and service categories",
+  "visualCharacteristics": {
+    "layout": "Grid layout with images and text",
+    "cardStyle": "Bordered cards with product images",
+    "gridBehavior": "Responsive grid that adapts to screen size",
+    "purpose": "Display product categories and insurance offerings"
+  },
+  "reuseGuidance": {
+    "useFor": [
+      "Insurance product categories",
+      "Service offering listings",
+      "Product navigation grids",
+      "Category browsing sections"
+    ],
+    "doNotUseFor": [
+      "Icon-based service features",
+      "Text-heavy content",
+      "Long-form articles"
+    ]
+  },
+  "usage": [
+    {
+      "page": "/content/index.md",
+      "section": "Insurance products grid",
+      "dateAdded": "2025-11-01"
+    }
+  ],
+  "created": "2025-11-01",
+  "lastModified": "2025-11-01"
+}

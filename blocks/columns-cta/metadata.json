@@ -1,0 +1,33 @@
+{
+  "name": "columns-cta",
+  "baseBlock": "columns",
+  "description": "Custom columns variant for call-to-action consultation sections with 2 columns",
+  "visualCharacteristics": {
+    "layout": "2-column layout with equal-width columns",
+    "mobileLayout": "Single column stack",
+    "desktopLayout": "Side-by-side columns with 24px gap",
+    "purpose": "Display consultation CTAs with phone and in-person options"
+  },
+  "reuseGuidance": {
+    "useFor": [
+      "Consultation CTA sections",
+      "Dual CTA options (phone + in-person)",
+      "Contact information sections",
+      "保険をご検討の方 / 対面でのご相談"
+    ],
+    "doNotUseFor": [
+      "Card grids",
+      "Feature showcases with images",
+      "Product listings"
+    ]
+  },
+  "usage": [
+    {
+      "page": "/content/about-axa/why-axa/index.md",
+      "section": "保険をご検討の方 and 対面でのご相談 (Consultation CTAs)",
+      "dateAdded": "2025-11-01"
+    }
+  ],
+  "created": "2025-11-01",
+  "lastModified": "2025-11-01"
+}

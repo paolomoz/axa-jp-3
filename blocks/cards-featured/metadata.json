@@ -1,0 +1,33 @@
+{
+  "name": "cards-featured",
+  "baseBlock": "cards",
+  "description": "Custom cards variant for featured and recommended content",
+  "visualCharacteristics": {
+    "layout": "Grid layout with card items",
+    "imageStyle": "4:3 aspect ratio with object-fit cover",
+    "spacing": "24px gap between cards",
+    "purpose": "Display featured editorial content and recommended articles"
+  },
+  "reuseGuidance": {
+    "useFor": [
+      "Featured content sections",
+      "Recommended articles",
+      "Editorial highlights",
+      "おすすめコンテンツ (recommended content)"
+    ],
+    "doNotUseFor": [
+      "Call-to-action cards",
+      "Partner listings",
+      "Quick access links"
+    ]
+  },
+  "usage": [
+    {
+      "page": "/content/index.md",
+      "section": "おすすめコンテンツ (Recommended Content)",
+      "dateAdded": "2025-11-01"
+    }
+  ],
+  "created": "2025-11-01",
+  "lastModified": "2025-11-01"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "cards-quick-access",
+  "baseBlock": "cards",
+  "description": "Custom cards variant for quick access links like document requests and insurance assessments",
+  "visualCharacteristics": {
+    "layout": "Grid layout with card items",
+    "imageStyle": "4:3 aspect ratio with object-fit cover",
+    "spacing": "24px gap between cards",
+    "purpose": "Display quick access action cards with call-to-action links"
+  },
+  "reuseGuidance": {
+    "useFor": [
+      "Quick access sections with actionable links",
+      "Document request and assessment cards",
+      "Primary call-to-action sections"
+    ],
+    "doNotUseFor": [
+      "Partner listings",
+      "Featured content displays",
+      "Product category showcases"
+    ]
+  },
+  "usage": [
+    {
+      "page": "/content/index.md",
+      "section": "資料請求・お申込み and 保険診断",
+      "dateAdded": "2025-11-01"
+    }
+  ],
+  "created": "2025-11-01",
+  "lastModified": "2025-11-01"
+}

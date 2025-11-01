@@ -1,0 +1,33 @@
+{
+  "name": "cards-reasons",
+  "baseBlock": "cards",
+  "description": "Custom cards variant for displaying reasons why customers choose AXA - numbered feature cards with images and descriptions",
+  "visualCharacteristics": {
+    "layout": "Grid layout with 4 numbered card items",
+    "imageStyle": "4:3 aspect ratio with object-fit cover",
+    "spacing": "24px gap between cards",
+    "purpose": "Display 4 key reasons/features with numbered headings, images, and descriptive text"
+  },
+  "reuseGuidance": {
+    "useFor": [
+      "Why choose us sections",
+      "Numbered feature lists",
+      "4つの理由 (4 reasons) sections",
+      "Key differentiators display"
+    ],
+    "doNotUseFor": [
+      "Product listings",
+      "Navigation sections",
+      "Quick access links"
+    ]
+  },
+  "usage": [
+    {
+      "page": "/content/about-axa/why-axa/index.md",
+      "section": "お客さまから選ばれる4つの理由 (4 Reasons Why Customers Choose Us)",
+      "dateAdded": "2025-11-01"
+    }
+  ],
+  "created": "2025-11-01",
+  "lastModified": "2025-11-01"
+}

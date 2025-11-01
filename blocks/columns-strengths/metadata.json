@@ -1,0 +1,33 @@
+{
+  "name": "columns-strengths",
+  "baseBlock": "columns",
+  "description": "Custom columns variant for displaying company strengths and key features",
+  "visualCharacteristics": {
+    "layout": "Responsive multi-column layout with image columns",
+    "mobileLayout": "Single column, image displayed above text",
+    "desktopLayout": "Side-by-side columns with 24px gap",
+    "purpose": "Showcase company strengths, features, and differentiators"
+  },
+  "reuseGuidance": {
+    "useFor": [
+      "Company strengths sections",
+      "Key features display",
+      "アクサ生命の強み (company strengths)",
+      "Image-with-text feature sections"
+    ],
+    "doNotUseFor": [
+      "Card grids",
+      "Navigation sections",
+      "Text-only columns"
+    ]
+  },
+  "usage": [
+    {
+      "page": "/content/index.md",
+      "section": "アクサ生命の強み (Company Strengths)",
+      "dateAdded": "2025-11-01"
+    }
+  ],
+  "created": "2025-11-01",
+  "lastModified": "2025-11-01"
+}

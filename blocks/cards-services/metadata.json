@@ -1,0 +1,33 @@
+{
+  "name": "cards-services",
+  "baseBlock": "cards",
+  "description": "Cards variant for displaying service features and consultation options with icons",
+  "visualCharacteristics": {
+    "layout": "Grid layout optimized for icon-based features",
+    "cardStyle": "Clean cards with icons and descriptions",
+    "gridBehavior": "Responsive grid layout",
+    "purpose": "Display service features and consultation methods"
+  },
+  "reuseGuidance": {
+    "useFor": [
+      "Service features with icons",
+      "Consultation method listings",
+      "Support options",
+      "Feature highlights with visual icons"
+    ],
+    "doNotUseFor": [
+      "Product categories with large images",
+      "Long-form content",
+      "Blog post listings"
+    ]
+  },
+  "usage": [
+    {
+      "page": "/content/index.md",
+      "section": "Consultation services",
+      "dateAdded": "2025-11-01"
+    }
+  ],
+  "created": "2025-11-01",
+  "lastModified": "2025-11-01"
+}
