@@ -1,0 +1,54 @@
+{
+  "variantName": "columns-feature",
+  "baseBlock": "columns",
+  "version": "1.0.0",
+  "created": "2025-11-01T18:27:20.378Z",
+  "sourceContext": {
+    "originUrl": "https://www.axa.co.jp/about-axa/why-axa/",
+    "originPage": "AXA Life Why Choose AXA page",
+    "screenshotPath": "blocks/columns-feature/reference-screenshot.png",
+    "blockPosition": "middle"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "feature-showcase",
+    "imagePattern": "large",
+    "textLength": "medium"
+  },
+  "contentPattern": {
+    "structure": "image + heading + description + CTA button",
+    "headingMaxLength": 80,
+    "descriptionMaxLength": 300,
+    "buttonCount": 1,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "feature presentation pages",
+      "benefits and advantages sections",
+      "service description pages",
+      "side-by-side image/text layouts"
+    ],
+    "notSuitableFor": [
+      "pages without images",
+      "pages with complex multi-column layouts",
+      "pages requiring 3+ columns"
+    ],
+    "similarVariants": []
+  },
+  "designTokens": {
+    "primaryColor": "#2c3e50",
+    "backgroundColor": "#ffffff",
+    "fontFamily": "Inter, sans-serif",
+    "headingSize": "2rem",
+    "padding": "24px"
+  },
+  "usage": {
+    "pagesUsing": [
+      "/about-axa/why-axa/index"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2025-11-01T18:27:20.378Z"
+  }
+}

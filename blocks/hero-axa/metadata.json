@@ -1,0 +1,53 @@
+{
+  "variantName": "hero-axa",
+  "baseBlock": "hero",
+  "version": "1.0.0",
+  "created": "2025-11-01T18:27:20.003Z",
+  "sourceContext": {
+    "originUrl": "https://www.axa.co.jp/about-axa/why-axa/",
+    "originPage": "AXA Life Why Choose AXA page",
+    "screenshotPath": "blocks/hero-axa/reference-screenshot.png",
+    "blockPosition": "top"
+  },
+  "visualCharacteristics": {
+    "colorScheme": "light",
+    "density": "minimal",
+    "purpose": "brand-hero",
+    "imagePattern": "large",
+    "textLength": "none"
+  },
+  "contentPattern": {
+    "structure": "background image only",
+    "headingMaxLength": 0,
+    "descriptionMaxLength": 0,
+    "buttonCount": 0,
+    "imageCount": 1
+  },
+  "reuseGuidance": {
+    "suitableFor": [
+      "brand landing pages",
+      "pages with large banner images",
+      "image-focused hero sections"
+    ],
+    "notSuitableFor": [
+      "pages requiring text overlay on hero",
+      "pages with CTAs in hero",
+      "pages without hero images"
+    ],
+    "similarVariants": []
+  },
+  "designTokens": {
+    "primaryColor": "#2c3e50",
+    "backgroundColor": "#ffffff",
+    "fontFamily": "Inter, sans-serif",
+    "headingSize": "3rem",
+    "padding": "40px 24px"
+  },
+  "usage": {
+    "pagesUsing": [
+      "/about-axa/why-axa/index"
+    ],
+    "reuseCount": 1,
+    "lastUsed": "2025-11-01T18:27:20.003Z"
+  }
+}

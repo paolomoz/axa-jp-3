@@ -1,0 +1,47 @@
+.hero-axa-container .hero-axa-wrapper {
+  max-width: unset;
+  padding: 0;
+}
+
+.hero-axa {
+  position: relative;
+  padding: 40px 24px;
+  min-height: 300px;
+}
+
+.hero-axa h1,
+.hero-axa h2,
+.hero-axa h3,
+.hero-axa h4,
+.hero-axa h5,
+.hero-axa h6,
+.hero-axa p {
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  color: var(--background-color);
+}
+
+.hero-axa.no-image * {
+  color: var(--text-color);
+}
+
+.hero-axa picture {
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  object-fit: cover;
+  box-sizing: border-box;
+}
+
+.hero-axa img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+@media (width >= 900px) {
+  .hero-axa {
+    padding: 40px 32px;
+  }
+}
