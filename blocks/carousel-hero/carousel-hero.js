@@ -79,6 +79,23 @@ function createSlide(row, slideIndex, carouselId) {
 
   row.querySelectorAll(':scope > div').forEach((column, colIdx) => {
     column.classList.add(`carousel-hero-slide-${colIdx === 0 ? 'image' : 'content'}`);
+
+    // Format content column
+    if (colIdx !== 0) {
+      const paragraph = column.querySelector('p');
+      if (paragraph) {
+        const content = paragraph.innerHTML;
+
+        // Convert first bold text to h2
+        const updatedContent = content.replace(
+          /^<strong>(.*?)<\/strong>\s*/,
+          '<h2>$1</h2>'
+        );
+
+        paragraph.innerHTML = updatedContent;
+      }
+    }
+
     slide.append(column);
   });
 
