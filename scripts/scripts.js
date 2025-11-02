@@ -72,6 +72,41 @@ function buildAutoBlocks(main) {
 }
 
 /**
+ * Moves attributes from one element to another.
+ * @param {Element} from The source element
+ * @param {Element} to The destination element
+ * @param {Array} attributes Optional array of attribute names to move
+ */
+export function moveAttributes(from, to, attributes) {
+  if (!attributes) {
+    // eslint-disable-next-line no-param-reassign
+    attributes = [...from.attributes].map(({ nodeName }) => nodeName);
+  }
+  attributes.forEach((attr) => {
+    const value = from.getAttribute(attr);
+    if (value) {
+      to.setAttribute(attr, value);
+      from.removeAttribute(attr);
+    }
+  });
+}
+
+/**
+ * Moves instrumentation attributes from one element to another.
+ * @param {Element} from The source element
+ * @param {Element} to The destination element
+ */
+export function moveInstrumentation(from, to) {
+  moveAttributes(
+    from,
+    to,
+    [...from.attributes]
+      .map(({ nodeName }) => nodeName)
+      .filter((attr) => attr.startsWith('data-aue-') || attr.startsWith('data-richtext-')),
+  );
+}
+
+/**
  * Decorates the main element.
  * @param {Element} main The main element
  */
