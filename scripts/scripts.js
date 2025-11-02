@@ -107,6 +107,26 @@ export function moveInstrumentation(from, to) {
 }
 
 /**
+ * Decorates h2 headings that start with numbers to display blue circle badges.
+ * @param {Element} main The main element
+ */
+function decorateNumberedHeadings(main) {
+  const h2Elements = main.querySelectorAll('h2');
+  h2Elements.forEach((h2) => {
+    const text = h2.textContent.trim();
+    // Check if h2 starts with a number followed by a space
+    const match = text.match(/^(\d+)\s+(.+)$/);
+    if (match) {
+      const number = match[1];
+      const restOfText = match[2];
+
+      // Create the badge structure
+      h2.innerHTML = `<span class="h2-number-badge">${number}</span><span class="h2-text">${restOfText}</span>`;
+    }
+  });
+}
+
+/**
  * Decorates the main element.
  * @param {Element} main The main element
  */
@@ -118,6 +138,7 @@ export function decorateMain(main) {
   buildAutoBlocks(main);
   decorateSections(main);
   decorateBlocks(main);
+  decorateNumberedHeadings(main);
 }
 
 /**

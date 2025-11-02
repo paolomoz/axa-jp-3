@@ -1,27 +1,75 @@
+/* AXA Cards Pictures Block - Matching Original Design */
+
 .cards-pictures > ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--spacing-m);
+  max-width: 1200px;
+  margin-inline: auto;
 }
 
 .cards-pictures > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
-}
-
-.cards-pictures .cards-pictures-card-body {
-  margin: 16px;
+  /* No border or background - clean design */
+  margin: 0;
+  padding: 0;
+  background-color: transparent;
 }
 
 .cards-pictures .cards-pictures-card-image {
   line-height: 0;
+  margin-bottom: 0;
 }
 
 .cards-pictures > ul > li img {
   width: 100%;
-  aspect-ratio: 4 / 3;
+  height: auto;
+  display: block;
   object-fit: cover;
+}
+
+.cards-pictures .cards-pictures-card-body {
+  padding: 0;
+  margin: 0;
+}
+
+.cards-pictures .cards-pictures-card-body p {
+  font-size: var(--body-font-size-m);
+  font-weight: var(--font-weight-normal);
+  color: var(--text-medium-gray);
+  margin: 0;
+}
+
+.cards-pictures .cards-pictures-card-body a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+}
+
+.cards-pictures .cards-pictures-card-body a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive: 3 columns on tablet */
+@media (max-width: 1024px) {
+  .cards-pictures > ul {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Responsive: 2 columns on mobile */
+@media (max-width: 768px) {
+  .cards-pictures > ul {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--spacing-s);
+  }
+}
+
+/* Responsive: 1 column on very small screens */
+@media (max-width: 480px) {
+  .cards-pictures > ul {
+    grid-template-columns: 1fr;
+  }
 }

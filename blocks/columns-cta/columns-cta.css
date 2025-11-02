@@ -1,33 +1,139 @@
-.columns-cta > div {
-  display: flex;
-  flex-direction: column;
+/* AXA Columns CTA Block - Contact Section */
+
+.columns-cta {
+  background-color: var(--light-gray);
+  padding: 48px 0;
 }
 
-.columns-cta img {
-  width: 100%;
+.columns-cta > div {
+  display: flex;
+  flex-direction: row;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 32px;
+  gap: 0;
 }
 
 .columns-cta > div > div {
-  order: 1;
+  flex: 1;
+  padding: 24px 48px;
 }
 
-.columns-cta > div > .columns-cta-img-col {
-  order: 0;
+/* Vertical divider between columns */
+.columns-cta > div > div:first-child {
+  border-right: 1px solid #d0d0d0;
 }
 
-.columns-cta > div > .columns-cta-img-col img {
+/* Headings */
+.columns-cta h2,
+.columns-cta > div > div > p:first-child strong:first-child {
+  font-size: 20px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-color);
   display: block;
+  margin-bottom: 16px;
 }
 
-@media (width >= 900px) {
+/* Phone number section */
+.columns-cta > div > div:first-child > p:first-child {
+  margin-bottom: 16px;
+}
+
+.columns-cta > div > div:first-child > p:first-child strong:nth-child(2) {
+  font-size: 32px;
+  font-weight: var(--font-weight-bold);
+  color: var(--text-color);
+  display: block;
+  margin: 8px 0;
+}
+
+/* "無料" badge next to phone */
+.columns-cta > div > div:first-child > p:first-child strong:nth-child(2)::after {
+  content: '無料';
+  display: inline-block;
+  margin-left: 12px;
+  padding: 4px 12px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 14px;
+  font-weight: var(--font-weight-bold);
+  border-radius: 4px;
+  vertical-align: middle;
+}
+
+/* Hours text */
+.columns-cta > div > div:first-child > p:first-child {
+  font-size: 14px;
+  color: var(--text-color);
+  line-height: 1.6;
+}
+
+/* Callback link */
+.columns-cta > div > div:first-child > p:last-child a,
+.columns-cta > div > div:first-child a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: var(--font-weight-bold);
+  font-size: 16px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.columns-cta > div > div:first-child a:hover {
+  text-decoration: underline;
+}
+
+/* Right column - consultation button */
+.columns-cta > div > div:last-child > p:first-child {
+  margin-bottom: 16px;
+}
+
+.columns-cta > div > div:last-child a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 60px;
+  background-color: var(--primary-color);
+  color: white;
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  text-decoration: none;
+  border-radius: 4px;
+  margin-bottom: 16px;
+  transition: background-color 0.2s ease;
+}
+
+.columns-cta > div > div:last-child a:hover {
+  background-color: var(--link-hover-color);
+}
+
+/* Disclaimer text */
+.columns-cta > div > div:last-child > p:last-child {
+  font-size: 12px;
+  color: var(--text-color);
+  line-height: 1.5;
+}
+
+/* Responsive: Stack vertically on mobile */
+@media (max-width: 900px) {
   .columns-cta > div {
-    align-items: center;
-    flex-direction: unset;
-    gap: 24px;
+    flex-direction: column;
+    padding: 0 24px;
   }
 
   .columns-cta > div > div {
-    flex: 1;
-    order: unset;
+    padding: 32px 24px;
+  }
+
+  .columns-cta > div > div:first-child {
+    border-right: none;
+    border-bottom: 1px solid #d0d0d0;
+  }
+
+  .columns-cta > div > div:first-child > p:first-child strong:nth-child(2) {
+    font-size: 28px;
   }
 }

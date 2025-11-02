@@ -1,27 +1,127 @@
+/* AXA Cards Reasons Block - Alternating Layout */
+
+.cards-reasons {
+  background-color: white;
+  padding: 0;
+}
+
 .cards-reasons > ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(257px, 1fr));
-  grid-gap: 24px;
+  max-width: 1200px;
+  margin-inline: auto;
 }
 
 .cards-reasons > ul > li {
-  border: 1px solid #dadada;
-  background-color: var(--background-color);
+  display: flex;
+  gap: 60px;
+  align-items: center;
+  padding: 64px 32px;
+  background-color: white;
+  border: none;
+  border-bottom: 1px solid #e0e0e0;
 }
 
-.cards-reasons .cards-reasons-card-body {
-  margin: 16px;
+.cards-reasons > ul > li:last-child {
+  border-bottom: none;
 }
 
-.cards-reasons .cards-reasons-card-image {
+/* Alternating layout: even items have image on right */
+.cards-reasons > ul > li:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.cards-reasons .cards-card-image {
+  flex: 0 0 auto;
   line-height: 0;
+  width: 600px;
 }
 
 .cards-reasons > ul > li img {
-  width: 100%;
-  aspect-ratio: 4 / 3;
+  width: 600px;
+  height: auto;
   object-fit: cover;
+  display: block;
+}
+
+.cards-reasons .cards-card-body {
+  flex: 1;
+  padding: 0;
+  margin: 0;
+}
+
+.cards-reasons .cards-card-body > p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.75;
+  color: var(--text-color);
+  margin-bottom: 24px;
+}
+
+/* Strong elements are 28px */
+.cards-reasons .cards-card-body strong {
+  font-size: 28px;
+  font-weight: 900;
+}
+
+/* Title paragraph */
+.cards-reasons .cards-card-body > p:first-child {
+  margin-bottom: 24px;
+}
+
+/* Description text */
+.cards-reasons .cards-card-body > p:nth-child(2) {
+  margin-bottom: 32px;
+}
+
+/* Link button */
+.cards-reasons .cards-card-body a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  width: 100%;
+  max-width: 400px;
+  height: 42px;
+  padding: 0 48px;
+  background-color: white;
+  border: 3px solid var(--primary-color);
+  color: var(--primary-color);
+  font-weight: var(--font-weight-bold);
+  font-size: 18px;
+  text-decoration: none;
+  border-radius: 0;
+  transition: all 0.2s ease;
+}
+
+.cards-reasons .cards-card-body a:hover {
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+}
+
+/* Responsive: Stack vertically on tablet and mobile */
+@media (max-width: 900px) {
+  .cards-reasons > ul > li {
+    flex-direction: column !important;
+    gap: 32px;
+    padding: 48px 24px;
+  }
+
+  .cards-reasons .cards-card-image {
+    flex: 0 0 auto;
+    width: 100%;
+  }
+
+  .cards-reasons > ul > li img {
+    width: 100%;
+  }
+
+
+  .cards-reasons .cards-card-body a {
+    font-size: 16px;
+    height: 42px;
+    padding: 0 32px;
+  }
 }

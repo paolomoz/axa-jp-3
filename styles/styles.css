@@ -11,62 +11,89 @@
  */
 
 :root {
-  /* colors */
+  /* AXA Japan Colors */
   --background-color: white;
-  --light-color: #f8f8f8;
-  --dark-color: #505050;
-  --text-color: #131313;
-  --link-color: #3b63fb;
-  --link-hover-color: #1d3ecf;
+  --light-color: #f0f0f0;
+  --light-gray: #f5f5f5;
+  --lighter-gray: #f8f8f8;
+  --border-color: #f0f0f0;
+  --dark-color: #333;
+  --text-color: #333;
+  --text-gray: #757575;
+  --text-light-gray: #696969;
+  --text-medium-gray: #656565;
 
-  /* fonts */
-  --body-font-family: roboto, roboto-fallback, sans-serif;
-  --heading-font-family: roboto-condensed, roboto-condensed-fallback, sans-serif;
+  /* AXA Primary Blue */
+  --primary-color: #00008f;
+  --link-color: #00008f;
+  --link-hover-color: #00006f;
 
-  /* body sizes */
-  --body-font-size-m: 22px;
-  --body-font-size-s: 19px;
-  --body-font-size-xs: 17px;
+  /* Additional AXA Colors */
+  --accent-cyan: #00adc6;
+  --accent-coral: #f07662;
+  --accent-navy: #27455c;
+  --accent-purple: #3860be;
+  --accent-green: #468254;
 
-  /* heading sizes */
-  --heading-font-size-xxl: 55px;
-  --heading-font-size-xl: 44px;
-  --heading-font-size-l: 34px;
-  --heading-font-size-m: 27px;
-  --heading-font-size-s: 24px;
-  --heading-font-size-xs: 22px;
+  /* Fonts - Source Sans Pro with Japanese fallbacks */
+  --body-font-family: 'Source Sans Pro', YuGothic, 'Yu Gothic', Meiryo, 'メイリオ', 'Hiragino Kaku Gothic ProN W3', 'ヒラギノ角ゴ ProN W3', sans-serif;
+  --heading-font-family: 'Source Sans Pro', YuGothic, 'Yu Gothic', Meiryo, 'メイリオ', 'Hiragino Kaku Gothic ProN W3', 'ヒラギノ角ゴ ProN W3', sans-serif;
 
-  /* nav height */
-  --nav-height: 64px;
+  /* Body sizes (mobile-first) */
+  --body-font-size-m: 16px;
+  --body-font-size-s: 14px;
+  --body-font-size-xs: 12px;
+
+  /* Heading sizes (mobile-first) */
+  --heading-font-size-xxl: 32px;
+  --heading-font-size-xl: 32px;
+  --heading-font-size-l: 24px;
+  --heading-font-size-m: 20px;
+  --heading-font-size-s: 16px;
+  --heading-font-size-xs: 14px;
+
+  /* Line heights */
+  --body-line-height: 1.4;
+  --heading-line-height: 1.4;
+
+  /* Font weights */
+  --font-weight-normal: 400;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Spacing */
+  --spacing-xs: 8px;
+  --spacing-s: 16px;
+  --spacing-m: 24px;
+  --spacing-l: 32px;
+  --spacing-xl: 48px;
+  --spacing-xxl: 64px;
+
+  /* Nav height */
+  --nav-height: 68px;
 }
 
-/* fallback fonts */
+/* Fallback fonts for Source Sans Pro */
 @font-face {
-  font-family: roboto-condensed-fallback;
-  size-adjust: 88.82%;
-  src: local('Arial');
-}
-
-@font-face {
-  font-family: roboto-fallback;
-  size-adjust: 99.529%;
+  font-family: source-sans-pro-fallback;
+  size-adjust: 100%;
   src: local('Arial');
 }
 
 @media (width >= 900px) {
   :root {
-    /* body sizes */
-    --body-font-size-m: 18px;
-    --body-font-size-s: 16px;
-    --body-font-size-xs: 14px;
+    /* Desktop sizes - AXA uses similar mobile/desktop sizes */
+    --body-font-size-m: 16px;
+    --body-font-size-s: 14px;
+    --body-font-size-xs: 12px;
 
-    /* heading sizes */
-    --heading-font-size-xxl: 45px;
-    --heading-font-size-xl: 36px;
-    --heading-font-size-l: 28px;
-    --heading-font-size-m: 22px;
-    --heading-font-size-s: 20px;
-    --heading-font-size-xs: 18px;
+    /* Desktop heading sizes */
+    --heading-font-size-xxl: 32px;
+    --heading-font-size-xl: 32px;
+    --heading-font-size-l: 24px;
+    --heading-font-size-m: 20px;
+    --heading-font-size-s: 16px;
+    --heading-font-size-xs: 14px;
   }
 }
 
@@ -76,8 +103,9 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
   font-family: var(--body-font-family);
-  font-size: var(--body-font-size-m);
-  line-height: 1.6;
+  font-size: var(--body-font-size-s);
+  line-height: var(--body-line-height);
+  font-weight: var(--font-weight-normal);
 }
 
 body.appear {
@@ -104,16 +132,44 @@ h3,
 h4,
 h5,
 h6 {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+  margin-top: 0;
+  margin-bottom: 0;
   font-family: var(--heading-font-family);
-  font-weight: 600;
-  line-height: 1.25;
+  font-weight: var(--font-weight-bold);
+  line-height: var(--heading-line-height);
+  color: var(--text-color);
   scroll-margin: 40px;
 }
 
 h1 { font-size: var(--heading-font-size-xxl); }
-h2 { font-size: var(--heading-font-size-xl); }
+h2 {
+  font-size: var(--heading-font-size-xl);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Blue circle badge for h2 numbers */
+h2 .h2-number-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 50%;
+  font-size: 18px;
+  font-weight: var(--font-weight-bold);
+  flex-shrink: 0;
+}
+
+h2 .h2-text {
+  flex: 1;
+}
+
 h3 { font-size: var(--heading-font-size-l); }
 h4 { font-size: var(--heading-font-size-m); }
 h5 { font-size: var(--heading-font-size-s); }
@@ -125,8 +181,8 @@ ol,
 ul,
 pre,
 blockquote {
-  margin-top: 0.8em;
-  margin-bottom: 0.25em;
+  margin-top: 0;
+  margin-bottom: var(--spacing-s);
 }
 
 code,
@@ -173,20 +229,22 @@ button {
   max-width: 100%;
   margin: 12px 0;
   border: 2px solid transparent;
-  border-radius: 2.4em;
-  padding: 0.5em 1.2em;
+  border-radius: 4px;
+  padding: 12px 24px;
   font-family: var(--body-font-family);
   font-style: normal;
-  font-weight: 500;
+  font-weight: var(--font-weight-bold);
+  font-size: var(--body-font-size-s);
   line-height: 1.25;
   text-align: center;
   text-decoration: none;
-  background-color: var(--link-color);
+  background-color: var(--primary-color);
   color: var(--background-color);
   cursor: pointer;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  transition: background-color 0.2s ease;
 }
 
 a.button:hover,
@@ -200,14 +258,20 @@ button:focus {
 button:disabled,
 button:disabled:hover {
   background-color: var(--light-color);
-  cursor: unset;
+  color: var(--text-gray);
+  cursor: not-allowed;
 }
 
 a.button.secondary,
 button.secondary {
-  background-color: unset;
-  border: 2px solid currentcolor;
-  color: var(--text-color);
+  background-color: white;
+  border: 2px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+a.button.secondary:hover,
+button.secondary:hover {
+  background-color: var(--light-color);
 }
 
 main img {
@@ -254,4 +318,42 @@ main .section.highlight {
   background-color: var(--light-color);
   margin: 0;
   padding: 40px 0;
+}
+
+main .section.gray {
+  background-color: var(--light-gray);
+  margin: 0;
+  padding: 40px 0;
+}
+
+main .section.dark {
+  background-color: var(--dark-color);
+  color: white;
+  margin: 0;
+  padding: 40px 0;
+}
+
+main .section.dark h1,
+main .section.dark h2,
+main .section.dark h3,
+main .section.dark h4,
+main .section.dark h5,
+main .section.dark h6 {
+  color: white;
+}
+
+main .section.primary {
+  background-color: var(--primary-color);
+  color: white;
+  margin: 0;
+  padding: 40px 0;
+}
+
+main .section.primary h1,
+main .section.primary h2,
+main .section.primary h3,
+main .section.primary h4,
+main .section.primary h5,
+main .section.primary h6 {
+  color: white;
 }
